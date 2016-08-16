@@ -1,2 +1,13 @@
+Tutoriales sobre repositorios:
+
 http://blog.desdelinux.net/guia-rapida-para-utilizar-github/
 https://git-scm.com/book/es/v1/Fundamentos-de-Git-Guardando-cambios-en-el-repositorio
+
+Como poner scroll bar: 
+http://stackoverflow.com/questions/4850192/how-to-add-scroll-bar-to-the-relative-layout
+
+Android soportar multi-idioma
+
+http://elandroidenovato.blogspot.com.co/2011/07/una-aplicacion-android-multi-idioma.html
+
+https://developer.android.com/training/basics/supporting-devices/languages.html#CreateDirs
