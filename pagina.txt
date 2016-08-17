@@ -11,3 +11,7 @@ Android soportar multi-idioma
 http://elandroidenovato.blogspot.com.co/2011/07/una-aplicacion-android-multi-idioma.html
 
 https://developer.android.com/training/basics/supporting-devices/languages.html#CreateDirs
+
+Para la Facebook API
+
+https://developers.facebook.com/docs/android/getting-started
