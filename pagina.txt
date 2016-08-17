@@ -15,3 +15,5 @@ https://developer.android.com/training/basics/supporting-devices/languages.html#
 Para la Facebook API
 
 https://developers.facebook.com/docs/android/getting-started
+
+http://www.leobaraldi.com.ar/2012/05/usar-la-api-de-facebook-por-donde-comenzar/
