@@ -19,3 +19,8 @@ https://developers.facebook.com/docs/android/getting-started
 http://www.leobaraldi.com.ar/2012/05/usar-la-api-de-facebook-por-donde-comenzar/
 
 https://developers.facebook.com/docs/android
+
+
+Para hacer el anteproyecto
+
+http://es.slideshare.net/vale2310/pasos-para-elaborar-anteproyecto
