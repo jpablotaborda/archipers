@@ -9,8 +9,6 @@ package heroesyvillanos;
  *
  * @author Juan Pablo
  */
-public class PoderAtaque extends Poder{
-    public PoderAtaque(){
-        this.setTipo("Ataque");
-    }
+public class EstrategiaDefensa {
+    
 }

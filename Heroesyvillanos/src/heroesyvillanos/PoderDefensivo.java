@@ -10,5 +10,7 @@ package heroesyvillanos;
  * @author Juan Pablo
  */
 public class PoderDefensivo extends Poder{
-    
+    public PoderDefensivo(){
+        this.setTipo("Defensivo");
+    }
 }

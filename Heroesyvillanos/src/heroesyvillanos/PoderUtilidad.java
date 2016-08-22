@@ -10,5 +10,7 @@ package heroesyvillanos;
  * @author Juan Pablo
  */
 public class PoderUtilidad extends Poder{
-    
+    public PoderUtilidad(){
+        this.setTipo("Utilidad");
+    }
 }
