@@ -2,7 +2,7 @@ package heroesyvillanos;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import javax.sound.midi.Soundbank;
+
 
 public class Interfaz {
 

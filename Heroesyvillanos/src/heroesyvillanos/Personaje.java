@@ -7,8 +7,8 @@ public class Personaje {
     private String nombre;
     private String liga;
     ArrayList<Poder> poder;
-    String[] implemento;
-    String[] frases;
+    String[] implementos;
+    String[] lis_frases;
 
   
     public String getNombre() {
