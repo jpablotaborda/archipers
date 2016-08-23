@@ -30,15 +30,19 @@ public class Interfaz {
         lector.nextLine();
         switch(opc_menu){
             case 1:
+                imprimirlinea();
                 InterfazCrearpersonaje();
                 break;
             case 2:
+                imprimirlinea();
                 InterfazBuscarPersonajes();
                 break;
             case 3:
+                imprimirlinea();
                 Interfazcreargrupocom();
                 break;
             case 4:
+                imprimirlinea();
                 interfazgrupoconvalora();
                 break;
         }
@@ -46,6 +50,8 @@ public class Interfaz {
     }
 
     static void imprimirlinea() {
+        System.out.println("");
+        System.out.println("");
         System.out.println("__________________________________________________________________________");
     }
 
@@ -114,7 +120,7 @@ public class Interfaz {
         }
         perso.crearpersonaje(nom_per, liga, implemen, frases, poderes);
         System.out.println("El personaje ha sido creado con éxito!");
-        
+        imprimirlinea();
         InterfazBuscarPersonajes();
     }
     static void InterfazBuscarPersonajes(){
@@ -126,14 +132,18 @@ public class Interfaz {
         System.out.println("Ingrese su opción: ");
         int num_opc_bus= lector.nextInt();
         lector.nextLine();
-        ArrayList per_a_imp;
+        ArrayList<Personaje> per_a_imp;
         if (num_opc_bus==1) {
             per_a_imp=InterfazBuscarPersonajesportipo();
         }
         else{
             per_a_imp=InterfazBuscarPersonajesporinfo();
         }
-        
+        System.out.println("Lista de personajes");
+        System.out.println("");
+        for (int i = 0; i < per_a_imp.size(); i++) {
+            System.out.println((i+1)+". "+per_a_imp.get(i).getNombre());
+        }
     }
 
     static ArrayList InterfazBuscarPersonajesportipo() {
