@@ -121,7 +121,7 @@ public class Interfaz {
         perso.crearpersonaje(nom_per, liga, implemen, frases, poderes);
         System.out.println("El personaje ha sido creado con éxito!");
         imprimirlinea();
-        InterfazBuscarPersonajes();
+        interfazmenuprin();
     }
     static void InterfazBuscarPersonajes(){
         System.out.println("Seleccione alguna de las siguientes opciones:");
@@ -134,16 +134,21 @@ public class Interfaz {
         lector.nextLine();
         ArrayList<Personaje> per_a_imp;
         if (num_opc_bus==1) {
+            imprimirlinea();
             per_a_imp=InterfazBuscarPersonajesportipo();
         }
         else{
+            imprimirlinea();
             per_a_imp=InterfazBuscarPersonajesporinfo();
         }
+        imprimirlinea();
         System.out.println("Lista de personajes");
         System.out.println("");
         for (int i = 0; i < per_a_imp.size(); i++) {
             System.out.println((i+1)+". "+per_a_imp.get(i).getNombre());
         }
+        imprimirlinea();
+        interfazmenuprin();
     }
 
     static ArrayList InterfazBuscarPersonajesportipo() {
@@ -163,28 +168,31 @@ public class Interfaz {
             per_tipo= perso.listarpersonajesportipo("Villano");
         }
         return per_tipo;
+        
     }
 
     static ArrayList InterfazBuscarPersonajesporinfo() {
         System.out.println("Ingrese la palabra que desea buscar: ");
-        String pal_bus=lector.next();
+        String pal_bus=lector.nextLine();
         return perso.listarpersonajesporinfo(pal_bus);
         
     }
     static void Interfazcreargrupocom(){
-        System.out.println("Cuál es el nombre del grupo: ");
-        String auxnom_com= lector.next();
-        System.out.println("Cuantos integrantes tiene el grupo: ");
+        System.out.print("Cuál es el nombre del grupo: ");
+        String auxnom_com= lector.nextLine();
+        System.out.print("Cuantos integrantes tendrá el grupo: ");
         int auxnum_int=lector.nextInt();
         lector.nextLine();
-        ArrayList<Personaje> aux_per=perso.getPersonajes();
+        ArrayList<Personaje> aux_per=perso.clonar();
         ArrayList<Personaje> per_grup= new ArrayList<>();
-        int[] num_int= new int[auxnum_int] ;
+        imprimirlinea();
+        System.out.println("Lista de personajes");
+        System.out.println("");
         for (int i = 0; i < auxnum_int; i++) {
             for (int j = 0; j <aux_per.size(); j++) {
-                System.out.println((j+1)+ aux_per.get(j).getNombre());
+                System.out.println((j+1)+ ". "+aux_per.get(j).getNombre());
             }
-            System.out.println("Digite el número del integrante "+(i+1)+": ");
+            System.out.print("Digite el número del integrante "+(i+1)+": ");
             int opc_int= lector.nextInt();
             lector.nextLine();
             per_grup.add(aux_per.get(opc_int-1));
@@ -195,7 +203,7 @@ public class Interfaz {
         Estrategia estra_gru= new EstrategiaAtaque();
         imprimirlinea();
         System.out.println("Sobre cuál estrategia desea evaluar(A: Ataque,D: Defensa, AE: Aerea): ");
-        String let_estra= lector.next();
+        String let_estra= lector.nextLine();
         String nom_estr="";
         if(let_estra.equals("A") || let_estra.equals("a")){
             estra_gru=  new EstrategiaAtaque();
@@ -209,16 +217,21 @@ public class Interfaz {
             estra_gru=  new EstrategiaAerea();
             nom_estr="Aerea";
         }
-        grupocom.creargrupocomba(per_grup, estra_gru, nom_estr);
+        grupocom.creargrupocomba(per_grup, estra_gru, nom_estr,auxnom_com);
         System.out.println("Grupo creado con exito!");
+        imprimirlinea();
+        interfazmenuprin();
         
     }
     static void interfazgrupoconvalora(){
         System.out.println("Estos son los grupos existentes: ");
         
         for (int i = 0; i < grupocom.getGruposcombatientes().size(); i++) {
-            System.out.println((i+1)+ " " + grupocom.getGruposcombatientes().get(i).getNombre()+" Estrategia: "+grupocom.getGruposcombatientes().get(i).getNom_estra()+ " Valoración: "+ grupocom.getGruposcombatientes().get(i).getValoración() );
+            System.out.println((i+1)+ ". Nombre: " + grupocom.getGruposcombatientes().get(i).getNombre()+", Estrategia: "+grupocom.getGruposcombatientes().get(i).getNom_estra()+ ", Valoración: "+ grupocom.getGruposcombatientes().get(i).getValoración() );
         }
+        imprimirlinea();
+        interfazmenuprin();
+        
     }
 }
 

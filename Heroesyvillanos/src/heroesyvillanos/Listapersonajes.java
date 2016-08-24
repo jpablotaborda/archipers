@@ -74,6 +74,13 @@ public class Listapersonajes {
     public void setPersonajes(ArrayList<Personaje> Personajes) {
         this.Personajes = Personajes;
     }
+    public ArrayList<Personaje> clonar(){
+        ArrayList<Personaje> el_clon= new ArrayList<>();
+        for (int i = 0; i < getPersonajes().size(); i++) {
+            el_clon.add(getPersonajes().get(i));
+        }
+        return el_clon;
+    }
 }
 
 
