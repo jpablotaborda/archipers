@@ -14,14 +14,15 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="4"
-        android:background="@drawable/corazonblancosinfondo"
+        android:background="@drawable/corazonfontrans"
         />
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:textSize="42dp"
         android:layout_weight="1"
-        android:text="Hola"
-        android:textColor="@color/blanco"/>
+        android:text="Te amo <3"
+        android:textColor="@color/blanco"
+        android:gravity="center"/>
 </LinearLayout>
