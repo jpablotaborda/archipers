@@ -15,7 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".distrib"></activity>
+        <activity android:name=".distrib" />
+        <activity android:name=".sorpresa"></activity>
     </application>
 
 </manifest>

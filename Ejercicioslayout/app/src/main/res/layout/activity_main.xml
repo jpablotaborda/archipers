@@ -65,7 +65,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:background="@color/morado"
-            android:layout_weight="2"></LinearLayout>
+            android:layout_weight="2"
+            android:onClick="otradistri"></LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"

@@ -8,4 +8,6 @@
     <color name="morado">#9400D3</color>
     <color name="azul">	#0000FF</color>
     <color name="verde">#00ff00</color>
+    <color name="fucsia">#FF0080</color>
+    <color name="blanco">#ffffff</color>
 </resources>
