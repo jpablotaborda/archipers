@@ -21,6 +21,12 @@ public class Hilera {
     public Boolean esVacia(){
         return primero==null;
     }
+    public nodoDoble getPrimero(){
+        return primero;
+    }
+    public nodoDoble getUltimo(){
+        return ultimo;
+    }
     public String recorridoizqder(){
         
         StringBuilder cons_hil= new StringBuilder();
@@ -78,6 +84,7 @@ public class Hilera {
             y.setLigader(x);
             
         }
+        
     }
     public void insertar(char letra,nodoDoble y){
         nodoDoble x,p;
@@ -104,26 +111,181 @@ public class Hilera {
         }
         
     }
-    public void borrarparte(String aborrar){
-        int pos_letra=0;
-        char letra_actu= aborrar.charAt(pos_letra);
-        nodoDoble p=primero;
-        
-        while(!finaldehilera(p)){
-            while(p.getLetra()!=letra_actu){
-                p=p.getLigader();
-            }
-            nodoDoble q=p.getLigader();
-            pos_letra++;
-            letra_actu=aborrar.charAt(pos_letra);
-//            for(int i = 1; i < aborrar.length(); i++) {
-//                    while(q.getLetra()==letra_actu){
-//                        
-//                    }
-//             }
-            
-            
-            
+    
+    public void invertir(){
+        nodoDoble p= ultimo;
+        ultimo=primero;
+        primero=p;
+        while(p!=null){
+            nodoDoble aux= p.getLigaizq();
+            p.setLigaizq(p.getLigader());
+            p.setLigader(aux);
+            p=aux;
         }
     }
+    void modificarhilera(int desde, int hasta, String inser){
+        Hilera hil_ins= new Hilera();
+        hil_ins.construirPalabra(inser);
+        nodoDoble p= primero;
+        if(p==null){
+            return ;
+        }
+        int con_nod=1;
+        while(con_nod< desde-1 ){
+            p=p.getLigader();
+            con_nod++;
+        }
+        nodoDoble q=p;
+        while(con_nod< hasta){
+            q=q.getLigader();
+            con_nod++;
+        }
+        
+        p.setLigader(null);
+        nodoDoble r=q.getLigader();
+        q.setLigader(null);
+        this.conectar(hil_ins.primero, p);
+        
+        if(r!=null)
+        {
+            
+            this.conectar(r, hil_ins.getUltimo());
+        }
+        else{
+            ultimo= hil_ins.getUltimo();
+        }
+        
+        
+        
+    }
+
+    public Boolean substringdepan(String hil_pan)// verifica si hilera original es substring de string en pant
+    {
+        Hilera hil_ent= new Hilera();
+        hil_ent.construirPalabra(hil_pan);
+        Boolean esSub=false;
+        nodoDoble p= getPrimero();
+        nodoDoble r= hil_ent.primero;
+        while(p!=null){
+            while(r.getLetra()==p.getLetra()){
+                nodoDoble q=p.getLigader();
+                r=r.getLigader();
+                while (q.getLetra()==r.getLetra()) {
+                    q=q.getLigader();
+                    r=r.getLigader();
+                    if(r==null){
+                        return true;
+                    }
+                }
+            }
+            p=p.getLigader();
+        
+        }
+        
+        return false;
+        
+    }
+    public String devolverpalabra(){
+        nodoDoble p= getPrimero();
+        StringBuilder crea_pal= new StringBuilder();
+        
+        while(p!=null){
+            crea_pal.append(p.getLetra());
+            p=p.getLigader();
+        }
+        return crea_pal.toString();
+    }
+     public Boolean verianagrama(Hilera hile1, Hilera hile2) {
+        nodoDoble p=hile1.primero;
+        nodoDoble q=hile2.primero;
+        Boolean ana=false;
+        
+        while(p.getLetra()==q.getLetra()){
+            p=p.getLigader();
+            q=q.getLigader();
+            if(p==null && q==null){
+                return true;
+            }
+        }
+        return ana;
+    }
+     public Hilera devolinvertido(){
+        Hilera inver= new Hilera();
+        nodoDoble p=ultimo;
+        while(p!=null){
+            nodoDoble x= new nodoDoble(p.getLetra());
+            inver.conectar(x, inver.ultimo);
+            p=p.getLigaizq();
+        }
+        return inver;
+    }
+    
+    public Boolean verpalindromo(){
+        nodoDoble p=primero;
+        Hilera invertida= this.devolinvertido();
+        nodoDoble q=invertida.primero;
+        Boolean palindromo= false;
+        while(p.getLetra()==q.getLetra()){
+            p=p.getLigader();
+        
+            q=q.getLigader();
+            if (p==null && q==null) {
+                return true;
+            }
+        }
+        
+        return palindromo;
+        
+    }
+    public void ordenar() {
+        nodoDoble p=primero;
+        while(p!=null){
+            nodoDoble q=p.getLigader();
+            while(q!=null){
+                if(p.getLetra()>q.getLetra()){
+                    char aux=q.getLetra();
+                    q.setLetra(p.getLetra());
+                    p.setLetra(aux);
+                    
+                }
+               q=q.getLigader();
+            }
+             p=p.getLigader();
+        }
+        
+    }
+    public Hilera copiaordenada(){
+        Hilera copia=this.crearcopia();
+        copia.ordenar();
+        return copia;
+    }
+    public Hilera crearcopia(){
+        Hilera copia= new Hilera();
+        nodoDoble p=primero;
+        while(p!=null){
+            nodoDoble x= new nodoDoble(p.getLetra());
+            copia.conectar(x, copia.ultimo);
+            p=p.getLigader();
+        } 
+        return copia;
+    }
+    public void borrarparte(int posicion){
+        nodoDoble x = primero; 
+        int i=1;
+        while (x != null) {
+            if (i == posicion) {
+                if (x == primero) {
+                    primero = ultimo = null;
+                } else {
+                    ultimo = x.getLigaizq();
+                    (x.getLigaizq()).setLigader(null);
+                }
+                return;
+            }
+            x = x.getLigader();
+            i++;
+        }
+    }
+                
+    
 }
