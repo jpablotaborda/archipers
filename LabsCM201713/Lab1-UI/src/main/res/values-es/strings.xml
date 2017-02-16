@@ -1,0 +1,99 @@
+<resources>
+    <string name="app_name">Pantalla principal</string>
+    <string name="botoning">Ingresar Datos</string>
+    <string name="fechanac">Fecha de Nacimiento:</string>
+    <string name="cambiarfecha">Cambiar</string>
+    <string-array name="escolaridad">
+        <item>Primaria</item>
+        <item>Secundaria</item>
+        <item>Universidad</item>
+        <item>Otro</item>
+    </string-array>
+    <string name="spinnerdefec">Grado Escolaridad</string>
+    <string name="telefono">Ingrese teléfono</string>
+    <string name="direccion">Ingrese dirección</string>
+    <string name="correo">Ingrese correo</string>
+    <string name="pais">Ingrese País</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="ciudad">Ingrese ciudad</string>
+    <string-array name="paiseslatinoame">
+        <item>Primaria</item>
+        <item>Secundaria</item>
+        <item>Universidad</item>
+        <item>Otro</item>
+        <item>Argentina</item>
+        <item>Bolivia</item>
+        <item>Brasil</item>
+        <item>Chile</item>
+        <item>Colombia</item>
+        <item>Costa Rica</item>
+        <item>Cuba</item>
+        <item>Ecuador</item>
+        <item>El Salvador</item>
+        <item>Guayana Francesa</item>
+        <item>Granada</item>
+        <item>Guatemala</item>
+        <item>Guayana</item>
+        <item>Haití</item>
+        <item>Honduras</item>
+        <item>Jamaica</item>
+        <item>México</item>
+        <item>Nicaragua</item>
+        <item>Paraguay</item>
+        <item>Panamá</item>
+        <item>Perú</item>
+        <item>Puerto Rico</item>
+        <item>República Dominicana</item>
+        <item>Surinam</item>
+        <item>Uruguay</item>
+        <item>Venezuela</item>
+    </string-array>
+    <string-array name="ciudadescol">
+        <item>Bogotá</item>
+        <item>Medellín</item>
+        <item> Cali</item>
+        <item>Barranquilla</item>
+        <item>Cartagena de Indias</item>
+        <item>Cúcula</item>
+        <item>Soledad</item>
+        <item>Ibagué</item>
+        <item>Bucaramanga</item>
+        <item>Soacha</item>
+        <item>Santa Marta</item>
+        <item>Villavicencio</item>
+        <item>Bello</item>
+        <item>Pereira</item>
+        <item>Valledupar</item>
+        <item>Manizales</item>
+        <item>Buenaventura</item>
+        <item>Pasto </item>
+        <item>Montería</item>
+        <item>Neiva </item>
+    </string-array>
+    <string name="personalinfo">Información Personal</string>
+    <string name="contacinfo">Información de Contacto</string>
+    <string name="otherinfo">Información complementaria</string>
+    <string name="leer">Leer</string>
+    <string name="vertv">Ver T.V</string>
+    <string name="bailar">Bailar</string>
+    <string name="cantar">Cantar</string>
+    <string name="nadar">Nadar</string>
+    <string name="nombre">Ingrese su nombre</string>
+    <string name="apellidos">Ingrese sus apellidos</string>
+    <string name="sexo">Sexo:</string>
+    <string name="hombre">Hombre</string>
+    <string name="mujer">Mujer</string>
+    <string name="mostrar">Mostrar</string>
+    <string name="mosnombre">Nombre</string>
+    <string name="mosape">Apellido</string>
+    <string name="mossexo">Sexo</string>
+    <string name="mosfechanac">Fecha Nacimiento</string>
+    <string name="mosesco">Escolaridad</string>
+    <string name="mostel">Telefono</string>
+    <string name="mosemail">Email</string>
+    <string name="mosdir">Dirección</string>
+    <string name="mospais">País</string>
+    <string name="mosciu">Ciudad</string>
+
+
+</resources>

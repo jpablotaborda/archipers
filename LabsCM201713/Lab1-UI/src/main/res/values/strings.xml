@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name">Main Screen</string>
+    <string name="botoning">Enter Data</string>
+    <string name="fechanac">Birthday:</string>
+    <string name="cambiarfecha">Change</string>
+    <string-array name="escolaridad">
+        <item>Primary School</item>
+        <item>High School</item>
+        <item>College</item>
+        <item>Other</item>
+    </string-array>
+    <string name="spinnerdefec">School Grade</string>
+    <string name="telefono">Enter telephone</string>
+    <string name="direccion">Enter Adress</string>
+    <string name="correo">Enter Email</string>
+    <string name="pais">Enter Country</string>
+    <string name="siguiente">Next</string>
+    <string name="ciudad">Enter City</string>
+    <string-array name="paiseslatinoame">
+        <item>Argentina</item>
+        <item>Bolivia</item>
+        <item>Brasil</item>
+        <item>Chile</item>
+        <item>Colombia</item>
+        <item>Costa Rica</item>
+        <item>Cuba</item>
+        <item>Ecuador</item>
+        <item>El Salvador</item>
+        <item>Guayana Francesa</item>
+        <item>Granada</item>
+        <item>Guatemala</item>
+        <item>Guayana</item>
+        <item>Haití</item>
+        <item>Honduras</item>
+        <item>Jamaica</item>
+        <item>México</item>
+        <item>Nicaragua</item>
+        <item>Paraguay</item>
+        <item>Panamá</item>
+        <item>Perú</item>
+        <item>Puerto Rico</item>
+        <item>República Dominicana</item>
+        <item>Surinam</item>
+        <item>Uruguay</item>
+        <item>Venezuela</item>
+    </string-array>
+    <string-array name="ciudadescol">
+        <item>Bogotá</item>
+        <item>Medellín</item>
+        <item> Cali</item>
+        <item>Barranquilla</item>
+        <item>Cartagena de Indias</item>
+        <item>Cúcula</item>
+        <item>Soledad</item>
+        <item>Ibagué</item>
+        <item>Bucaramanga</item>
+        <item>Soacha</item>
+        <item>Santa Marta</item>
+        <item>Villavicencio</item>
+        <item>Bello</item>
+        <item>Pereira</item>
+        <item>Valledupar</item>
+        <item>Manizales</item>
+        <item>Buenaventura</item>
+        <item>Pasto </item>
+        <item>Montería</item>
+        <item>Neiva </item>
+    </string-array>
+    <string name="personalinfo">Personal Information</string>
+    <string name="contacinfo">Contact Information</string>
+    <string name="otherinfo">Additional Information</string>
+    <string name="leer">Read</string>
+    <string name="vertv">Watch T.V</string>
+    <string name="bailar">Dance</string>
+    <string name="cantar">Sing</string>
+    <string name="nadar">Swim</string>
+    <string name="nombre">Enter your name</string>
+    <string name="apellidos">Enter your lastname</string>
+    <string name="sexo">Sex:</string>
+    <string name="hombre">Male</string>
+    <string name="mujer">Female</string>
+    <string name="mostrar">Show</string>
+    <string name="mosnombre">Name</string>
+    <string name="mosape">Last Name</string>
+    <string name="mossexo">Sex</string>
+    <string name="mosfechanac">Birthday</string>
+    <string name="mosesco">Education</string>
+    <string name="mostel">Telephone</string>
+    <string name="mosemail">Email</string>
+    <string name="mosdir">Address</string>
+    <string name="mospais">Country</string>
+    <string name="mosciu">City</string>
+
+</resources>
